@@ -1,0 +1,9 @@
+@use '@angular/material' as mat;
+
+$primary-palette: mat.define-palette(mat.$indigo-palette, 600, 300, 900);
+
+$light-theme: mat.define-theme((
+    color: (
+        //TODO
+    )
+))
