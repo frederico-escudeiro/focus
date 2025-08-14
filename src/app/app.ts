@@ -19,4 +19,6 @@ import { ToggleThemeComponent } from './toggle-theme/toggle-theme';
 })
 export class App {
   protected readonly title = signal('focus');
+
+  isDark = signal<boolean>(false);
 }

@@ -1,9 +1,17 @@
 @use '@angular/material' as mat;
 
-$primary-palette: mat.define-palette(mat.$indigo-palette, 600, 300, 900);
+html {
+  color-scheme: light;
+  @include mat.theme((
+    color: mat.$azure-palette,
+    typography: Roboto
+  ));
+}
 
-$light-theme: mat.define-theme((
-    color: (
-        //TODO
-    )
-))
+body.dark-theme{
+    color-scheme: dark;
+    @include mat.theme((
+    color: mat.$azure-palette,
+    typography: Roboto
+  ));
+}

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input, signal } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 
@@ -13,10 +13,10 @@ import { MatIconModule } from "@angular/material/icon";
 })
 export class ToggleThemeComponent {
 
-    isDark: boolean = false;
+    @Input({required : true}) isDark!: ReturnType<typeof signal<boolean>>;
 
     toggleTheme() {
-        this.isDark = !this.isDark;
-        return;
+        this.isDark.update(x => !x);
+        document.body.classList.toggle('dark-theme', this.isDark());
     }
 }
