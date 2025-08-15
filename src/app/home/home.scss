@@ -1,0 +1,17 @@
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-card {
+    width: clamp(150px, 60%, 300px);
+    transition: transform 0.3s ease;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+}

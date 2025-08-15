@@ -1,0 +1,13 @@
+@for(board of boards; track board.id) {
+<mat-card class="menu-card">
+    <mat-card-header tabindex="0" gutterSize="20px">
+        <mat-card-title>{{ board.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>{{ board.description }}</p>
+    </mat-card-content>
+    <mat-card-footer>
+        <button mat-flat-button (click)="navigateTo(board)">Go to {{ board.title }}</button>
+    </mat-card-footer>
+</mat-card>
+}

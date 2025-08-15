@@ -1,14 +1,12 @@
-<mat-grid-list cols="1" rowHeight="128px" rowWidth="2:1">
+<div class="menu-list">
     @for (item of menuItems; track item.title) {
-    <mat-grid-tile>
-        <mat-card width="100%">
-            <mat-card-header tabindex="0" gutterSize="20px">
-                <mat-card-title>{{ item.title }}</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <p>{{ item.description }}</p>
-            </mat-card-content>
-        </mat-card>
-    </mat-grid-tile>
+    <mat-card class="menu-card" (click)="navigateTo(item)">
+        <mat-card-header tabindex="0" gutterSize="20px">
+            <mat-card-title>{{ item.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{ item.description }}</p>
+        </mat-card-content>
+    </mat-card>
     }
-</mat-grid-list>
+</div>
