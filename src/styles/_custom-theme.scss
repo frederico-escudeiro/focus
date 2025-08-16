@@ -3,7 +3,7 @@
 body {
   color-scheme: light;
   @include mat.theme((
-    color: mat.$azure-palette,
+    color: mat.$cyan-palette,
     typography: Roboto
   ));
 }
@@ -11,7 +11,7 @@ body {
 body.dark-theme{
     color-scheme: dark;
     @include mat.theme((
-    color: mat.$azure-palette,
+    color: mat.$cyan-palette,
     typography: Roboto
   ));
 }

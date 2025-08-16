@@ -21,7 +21,7 @@ import { v4 as uuidv4 } from 'uuid';
 export class Boards {
     router = inject(Router);
     boards = [
-        new Board('1', 'Project Alpha', 'Description for Project Alpha'),
+        new Board(uuidv4(), 'Project Alpha', 'Description for Project Alpha'),
     ]
 
     createBoard() {
