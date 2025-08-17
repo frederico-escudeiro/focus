@@ -9,7 +9,7 @@ export class ToggleThemeService {
     toggleTheme(): void {
         const isCurrentlyDark: boolean = this.isDarkSig();
         this.isDarkSig.set(!isCurrentlyDark);
-        document.body.classList.toggle('dark-theme', !isCurrentlyDark);
+        document.documentElement.classList.toggle('dark-theme', !isCurrentlyDark);
     }
 
     get isDark(): boolean {
