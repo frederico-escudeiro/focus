@@ -1,6 +1,4 @@
-<mat-toolbar color="primary" class="app-toolbar">
-  <span>Focus</span>
-  <span class="spacer"></span>
-  <app-toggle-theme [isDark]="isDark"></app-toggle-theme>
-</mat-toolbar>
-<router-outlet></router-outlet>
+<app-toolbar class="toolbar-container"></app-toolbar>
+<div class="main-content">
+    <router-outlet></router-outlet>
+</div>

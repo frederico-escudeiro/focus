@@ -1,24 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ToggleThemeComponent } from './toggle-theme/toggle-theme';
+import { Toolbar } from './toolbar/toolbar';
 
 @Component({
   selector: 'app-root',
   imports: [
     RouterOutlet,
-    MatIconModule,
-    MatButtonModule,
-    MatToolbarModule,
-    ToggleThemeComponent
+    Toolbar
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('focus');
 
-  isDark = signal<boolean>(false);
 }

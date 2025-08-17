@@ -1,10 +1,15 @@
-.app-toolbar {
-  position: sticky; //TODO see what should be used here
-  top: 0px;
-  left: 0px;
-  right: 0px;
+@use '../styles/variables' as variables;
+
+.toolbar-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: variables.$toolbar-height;
+}
+
+.main-content {
+  padding-top: variables.$toolbar-height; /* Adjust based on the height of your toolbar */
 }

@@ -1,6 +1,7 @@
-import { Component, Input, signal } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
+import { ToggleThemeService } from "./toggle-theme-service";
 
 @Component({
     selector: 'app-toggle-theme',
@@ -11,12 +12,14 @@ import { MatIconModule } from "@angular/material/icon";
     templateUrl: './toggle-theme.html',
     styleUrl: './toggle-theme.scss',
 })
-export class ToggleThemeComponent {
-
-    @Input({required : true}) isDark!: ReturnType<typeof signal<boolean>>;
+export class ToggleTheme {
+    toggleThemeService = inject(ToggleThemeService)
 
     toggleTheme() {
-        this.isDark.update(x => !x);
-        document.body.classList.toggle('dark-theme', this.isDark());
+        this.toggleThemeService.toggleTheme();
     }
+
+    get isDark() {
+        return this.toggleThemeService.isDark;
+    }   
 }
