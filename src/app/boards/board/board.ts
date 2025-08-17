@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from "@angular/material/card";
+import { BoardService } from "./board-service";
 
 @Component({
     selector: 'app-board',
@@ -13,9 +14,5 @@ import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from "@angular/m
     ]
 })
 export class Board {
-    tasks = [
-        { id: '1', title: 'Task 1', description: 'Description for Task 1' },
-        { id: '2', title: 'Task 2', description: 'Description for Task 2' },
-        { id: '3', title: 'Task 3', description: 'Description for Task 3' }
-    ]
+    board = inject(BoardService);
 } 
