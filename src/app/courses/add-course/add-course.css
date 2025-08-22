@@ -1,0 +1,33 @@
+@use "/src/styles/variables";
+
+.mdc-dialog__title::before {
+    display: none;
+}
+
+.form-add-course {
+    padding: 24px;
+}
+
+.form-add-course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-add-course-title {
+    font-family: variables.$font-family;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.form-add-course-input {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.form-add-course-actions {
+    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}

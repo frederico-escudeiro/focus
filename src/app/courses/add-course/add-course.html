@@ -1,6 +1,20 @@
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <input type="text" formControlName="title" placeholder="Course Title" />
-    <input type="text" formControlName="description" placeholder="Course Description" />
-    <button type="submit" mat-raised-button color="primary">Add Course</button>
-    <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+<form class="form-add-course" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-add-course-header">
+        <h2 class="form-add-course-title">Add Course</h2>
+        <button mat-icon-button>
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <mat-form-field class="form-add-course-input">
+        <mat-label>Course Title</mat-label>
+        <input matInput type="text" formControlName="title" placeholder="ex.: History" />
+    </mat-form-field>
+    <mat-form-field class="form-add-course-input">
+        <mat-label>Course description</mat-label>
+        <input matInput type="text" formControlName="description" placeholder="ex.: The best subject ever!" />
+    </mat-form-field>
+    <div class="form-add-course-actions">
+        <button matButton (click)="onCancel()">Cancel</button>
+        <button matButton="filled" type="submit" color="primary">Add Course</button>
+    </div>
 </form>

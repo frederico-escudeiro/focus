@@ -11,7 +11,6 @@ interface Course {
   instructor?: string;
 }
 
-
 @Component({
   selector: 'app-courses',
   providers: [MatDialogModule],
@@ -32,11 +31,9 @@ export class Courses {
   }
 
   addCourse() {
-
     let dialogRef = this.dialog.open(AddCourse, {
       width: '90%',
-      minHeight: '40vh',
-      height: '80vh',
+      height: 'fit-content',
       maxHeight: '80vh',
     });
 
@@ -50,8 +47,6 @@ export class Courses {
         this.courses.update(courses => [...courses, newCourse]);
       }
     })
-
-    //this.courses.update(courses => [...courses, newCourse]);
   }
 
   removeCourse(courseId: number) {

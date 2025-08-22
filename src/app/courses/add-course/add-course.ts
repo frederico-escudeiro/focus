@@ -1,12 +1,23 @@
-import { I } from '@angular/cdk/keycodes';
 import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { FormGroup, Validators, FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
+import { MatInput } from '@angular/material/input';
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatButton, MatIconButton } from '@angular/material/button';
+import { MatIcon } from "@angular/material/icon";
 
 @Component({
   selector: 'app-add-course',
   providers: [],
-  imports: [ReactiveFormsModule],
+  imports: [
+    ReactiveFormsModule,
+    MatInput,
+    MatFormField,
+    MatLabel,
+    MatButton,
+    MatIcon,
+    MatIconButton
+],
   templateUrl: './add-course.html',
   styleUrl: './add-course.css'
 })
@@ -34,7 +45,7 @@ export class AddCourse {
 
   onCancel() {
     this.form.reset();
-    this.dialogRef.close(null);
+    this.dialogRef.close();
   }
 
 }
