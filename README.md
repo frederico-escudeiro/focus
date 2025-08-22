@@ -1,59 +1,20 @@
-# Focus
+### focus app
+An app for managing daily tasks.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
+# Target audience
+Students - In this day and age students tend to focus on various hobbies and tasks everyday. If they are not organized on what they should be doing, somethings could go off track easily. The answer lies in building the habits and block time for the various tasks and stay organized.
 
-## Development server
+# Information arquitecture
+- Tasks are the basic block of this application. Tasks contain information on their story and how they my relate to each other. 
+- Projects are a way of bundling tasks and acquiring a deadline. While project tasks share a deadline, standalone tasks have their own deadline.
+- Categories are labels that each task has. Categories is just another way of listing tasks. A Task may have various categories.
+- Each User has their own set of tasks.
 
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# In Scope for version 1.0
+- User Accounts
+- Task CRUD
+- Projects/Lists
+- Due Dates/Reminders
+- Priorites/Tags
+- Basic Search
+- Responsive UI
