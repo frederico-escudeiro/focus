@@ -1,0 +1,6 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="title" placeholder="Course Title" />
+    <input type="text" formControlName="description" placeholder="Course Description" />
+    <button type="submit" mat-raised-button color="primary">Add Course</button>
+    <button mat-raised-button color="warn" (click)="onCancel()">Cancel</button>
+</form>

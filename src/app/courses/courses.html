@@ -1,0 +1,16 @@
+<div>
+    <h2>Your Courses</h2>
+    <ul>
+        @for (course of courses(); track course.id) {
+        <li>
+            <a>{{ course.title }}</a>
+        </li>
+        }
+
+    </ul>
+</div>
+<div class="course-menu">
+    <button matFab (click)="addCourse()">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>
