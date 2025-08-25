@@ -1,13 +1,13 @@
 <form class="form-add-course" [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="form-add-course-header">
         <h2 class="form-add-course-title">Add Course</h2>
-        <button mat-icon-button>
+        <button mat-icon-button (click)="onCancel()" aria-label="Close add course form">
             <mat-icon>close</mat-icon>
         </button>
     </div>
     <mat-form-field class="form-add-course-input">
         <mat-label>Course Title</mat-label>
-        <input matInput type="text" formControlName="title" placeholder="ex.: History" />
+        <input matInput type="text" formControlName="title" placeholder="ex.: History" firstFocus />
     </mat-form-field>
     <mat-form-field class="form-add-course-input">
         <mat-label>Course description</mat-label>

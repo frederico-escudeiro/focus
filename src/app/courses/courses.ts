@@ -35,6 +35,7 @@ export class Courses {
       width: '90%',
       height: 'fit-content',
       maxHeight: '80vh',
+      autoFocus: "input[firstFocus]",
     });
 
     dialogRef.afterClosed().subscribe(result => {
